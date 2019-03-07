@@ -72,6 +72,7 @@ def print_counter_status(counter, output_stream):
 
 
 def main(cmd_line_args=None):
+    global counter
     if cmd_line_args is None:
         cmd_line_args = sys.argv[1:]
 
@@ -97,7 +98,7 @@ def main(cmd_line_args=None):
         CounterAccumulator()
     )
     def increment_counter(group, name, amount=1):
-        nonlocal counter
+        global counter
         counter += {(group, name):  amount}
 
     def make_job(*args):

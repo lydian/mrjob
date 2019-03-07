@@ -95,6 +95,7 @@ setup(
         'mrjob.logs',
         'mrjob.tools',
         'mrjob.tools.emr',
+        'mrjob.spark',
     ],
     package_data={
         'mrjob': ['bootstrap/*.sh'],
